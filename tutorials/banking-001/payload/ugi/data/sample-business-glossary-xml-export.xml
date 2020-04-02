@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glossary xmlns="http://www.ibm.com/is/bg/importexport"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ibm.com/is/bg/importexport BGSchema.xsd"
+    version="1.6" exportTime="1513669794623"
+    ignoreAssignedAssets="false" ignoreLabeledAssets="false"
+    ignoreAssetCollections="false" ignoreStewards="false">
+    <categories>
+        <category
+            rid="6662c0f2.ee6a64fe.qgbm0rc39.a0pjcnk.0dp4pl.vhvfnse1q11hmd98lhs0n"
+            name="Business Information" shortDescription="Category for term definitions that describes the business information"/>
+        <category
+            rid="6662c0f2.ee6a64fe.qgbm0rc4j.fhqrfq9.f6asn3.cdegbk36arnkafra250n2"
+            name="Customer Information" shortDescription="Category for term definitions that describes the customer">
+            <parentCategory
+                rid="6662c0f2.ee6a64fe.qgbm0rc39.a0pjcnk.0dp4pl.vhvfnse1q11hmd98lhs0n" identity="Business Information"/>
+        </category>
+    </categories>
+    <terms>
+        <term
+            rid="6662c0f2.e1b1ec6c.qgbm0rc65.970udng.s1prmh.0op6jd9i8a4c2p7crl179"
+            name="Age" shortDescription="Age of a customer"
+            status="STANDARD" type="NONE">
+            <parentCategory
+                rid="6662c0f2.ee6a64fe.qgbm0rc4j.fhqrfq9.f6asn3.cdegbk36arnkafra250n2" identity="Business Information::Customer Information"/>
+        </term>
+        <term
+            rid="6662c0f2.e1b1ec6c.qgbm0rc7v.2pq6c6s.3i3h4a.24tce8gv4t7hqq3ip7hl4"
+            name="email Address"
+            shortDescription="email Address for communication "
+            status="STANDARD" type="NONE">
+            <parentCategory
+                rid="6662c0f2.ee6a64fe.qgbm0rc4j.fhqrfq9.f6asn3.cdegbk36arnkafra250n2" identity="Business Information::Customer Information"/>
+        </term>
+        <term
+            rid="6662c0f2.e1b1ec6c.qgbm0rc7b.ge3m3ck.ek0rn9.qac6g2m43vs03gdidolfg"
+            name="First Name" shortDescription="Customers first name"
+            status="CANDIDATE" type="NONE">
+            <parentCategory
+                rid="6662c0f2.ee6a64fe.qgbm0rc4j.fhqrfq9.f6asn3.cdegbk36arnkafra250n2" identity="Business Information::Customer Information"/>
+        </term>
+        <term
+            rid="6662c0f2.e1b1ec6c.qgbm0rc6m.in820cu.i1ufb6.4up1ptemmd9jnvnqufvsr"
+            name="Gender" shortDescription="Male or Female customer"
+            status="ACCEPTED" type="NONE">
+            <parentCategory
+                rid="6662c0f2.ee6a64fe.qgbm0rc4j.fhqrfq9.f6asn3.cdegbk36arnkafra250n2" identity="Business Information::Customer Information"/>
+        </term>
+        <term
+            rid="6662c0f2.e1b1ec6c.qgbm0rc5o.no8oafu.qdseis.dpmbimjtqdvlphlaj1j8h"
+            name="Name"
+            shortDescription="The name with which customer is called"
+            status="ACCEPTED" type="NONE">
+            <parentCategory
+                rid="6662c0f2.ee6a64fe.qgbm0rc4j.fhqrfq9.f6asn3.cdegbk36arnkafra250n2" identity="Business Information::Customer Information"/>
+        </term>
+    </terms>
+    <policies>
+        <policy
+            rid="6662c0f2.8ed29152.qgbm0rc8g.5153lsd.f17cgj.f5c9vt63rhu08pjr9ti26"
+            name="Know Your Customer KYC" shortDescription="Know your customer policy">
+            <referencedRules>
+                <ruleRef
+                    rid="6662c0f2.e1b13efc.qgbm0rca3.p5bcrgi.urkm1d.5s99r6rnmn4b362ak592j" identity="Age must be valid"/>
+                <ruleRef
+                    rid="6662c0f2.e1b13efc.qgbm0rcbk.lks2476.ic1hmk.2ggqnuusq4benm6alqkn8" identity="Email Address must be valid"/>
+                <ruleRef
+                    rid="6662c0f2.e1b13efc.qgbm0rc9h.195s7hs.6tu7ov.vikfb2um0797e5bqo19op" identity="Customer Name must be complete and Valid"/>
+            </referencedRules>
+        </policy>
+    </policies>
+    <rules>
+        <rule
+            rid="6662c0f2.e1b13efc.qgbm0rca3.p5bcrgi.urkm1d.5s99r6rnmn4b362ak592j"
+            name="Age must be valid" shortDescription="Age proof">
+            <referencedByPolicies>
+                <policyRef
+                    rid="6662c0f2.8ed29152.qgbm0rc8g.5153lsd.f17cgj.f5c9vt63rhu08pjr9ti26" identity="Know Your Customer KYC"/>
+            </referencedByPolicies>
+            <typedAssignedAssets>
+                <assignedAssets assignmentType="GOVERNS">
+                    <termRef
+                        rid="6662c0f2.e1b1ec6c.qgbm0rc65.970udng.s1prmh.0op6jd9i8a4c2p7crl179" identity="Business Information::Customer Information::Age"/>
+                </assignedAssets>
+            </typedAssignedAssets>
+        </rule>
+        <rule
+            rid="6662c0f2.e1b13efc.qgbm0rc9h.195s7hs.6tu7ov.vikfb2um0797e5bqo19op"
+            name="Customer Name must be complete and Valid" shortDescription="Identification proof for the customer">
+            <referencedByPolicies>
+                <policyRef
+                    rid="6662c0f2.8ed29152.qgbm0rc8g.5153lsd.f17cgj.f5c9vt63rhu08pjr9ti26" identity="Know Your Customer KYC"/>
+            </referencedByPolicies>
+            <typedAssignedAssets>
+                <assignedAssets assignmentType="GOVERNS">
+                    <termRef
+                        rid="6662c0f2.e1b1ec6c.qgbm0rc5o.no8oafu.qdseis.dpmbimjtqdvlphlaj1j8h" identity="Business Information::Customer Information::Name"/>
+                </assignedAssets>
+            </typedAssignedAssets>
+        </rule>
+        <rule
+            rid="6662c0f2.e1b13efc.qgbm0rcan.bc92vc8.8u9v8p.ul5ove4if0rrvfrjr4bpr"
+            name="Customer record must be up-to-date" shortDescription="All customer records should be up-to-date"/>
+        <rule
+            rid="6662c0f2.e1b13efc.qgbm0rcbk.lks2476.ic1hmk.2ggqnuusq4benm6alqkn8"
+            name="Email Address must be valid" shortDescription="Valid customer email Address should be mentioned">
+            <referencedByPolicies>
+                <policyRef
+                    rid="6662c0f2.8ed29152.qgbm0rc8g.5153lsd.f17cgj.f5c9vt63rhu08pjr9ti26" identity="Know Your Customer KYC"/>
+            </referencedByPolicies>
+            <typedAssignedAssets>
+                <assignedAssets assignmentType="GOVERNS">
+                    <termRef
+                        rid="6662c0f2.e1b1ec6c.qgbm0rc7v.2pq6c6s.3i3h4a.24tce8gv4t7hqq3ip7hl4" identity="Business Information::Customer Information::email Address"/>
+                </assignedAssets>
+            </typedAssignedAssets>
+        </rule>
+    </rules>
+</glossary>
